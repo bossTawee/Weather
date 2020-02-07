@@ -37,8 +37,8 @@ SecondPageInteratorDataStore, SecondPageInteratorDataDestination {
     var worker: SecondPageWorker?
     
     func getDataForcast7DayAgo(request: SecondPageModels.Request) {
+        //debug
         cityData = request.city
-        print("sdsdsd"+cityData)
         if cityData == "Hua Hin" {
              cityData = "Hua%20Hin"
         }

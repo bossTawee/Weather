@@ -43,7 +43,8 @@ class SecondPageViewController: UIViewController, SecondPageViewControllerInput 
     }
     
     func getDataForcast() {
-        
+        //debug
+        //let request = SecondPageModels.Request()
         let request = SecondPageModels.Request(city: (self.router?.dataDestination!.cityData)!)
         output?.getDataForcast7DayAgo(request: request)
     }
@@ -110,6 +111,8 @@ extension SecondPageViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         if let forcastData = self.forcastData {
+            //edit
+            //headerCell.setData(data: "")
             headerCell.setData(data: forcastData.city.name)
         } else {
 

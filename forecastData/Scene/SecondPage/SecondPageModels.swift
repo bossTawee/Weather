@@ -11,6 +11,8 @@ import UIKit
 enum SecondPageModels {
 
     struct Request {
+        //debug
+        //
         let city: String
     }
     

@@ -55,6 +55,8 @@ extension FirstPageForcastViewController: UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //debug
+        //cell.textLabel?.text = city[0]
         cell.textLabel?.text = city[indexPath.row]
         return cell
     }

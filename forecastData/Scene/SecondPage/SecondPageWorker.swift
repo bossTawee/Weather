@@ -12,12 +12,7 @@ import SwiftyJSON
 
 class SecondPageWorker {
     
-    func test() {
-        print("hello")
-    }
-    
     static func getDataForcast7DayAgo(provice: String, completion: @escaping(_ result: JSON, _ error: String) -> ()){
-        print("get"+provice)
         let url = "\(BaseUrl.baseUrl)/forecast/daily?q=\(provice)&cnt=10\(BaseUrl.appId)"
         Alamofire.request(url).responseJSON { (response) in
             
@@ -28,7 +23,8 @@ class SecondPageWorker {
                 if statusCode == 200 {
                     
                     let json = JSON(result)
-                    print(json)
+                    //debug
+                    //completion("", "")
                     completion(json, "")
                 } else {
                     

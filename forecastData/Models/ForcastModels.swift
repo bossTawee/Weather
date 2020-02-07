@@ -19,6 +19,8 @@ enum ForcastModels {
         static func deserialize(data: JSON) -> ForcastCity {
             return ForcastModels.ForcastCity(
                 city: CityDetail.deserialize(data: JSON(data["city"])),
+                //debug
+                //list: data["lists"].arrayValue.map(List.deserialize)
                 list: data["list"].arrayValue.map(List.deserialize)
             )
         }
