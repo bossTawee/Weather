@@ -1,0 +1,6 @@
+framework module Pods_forecastDataUITests {
+  umbrella header "Pods-forecastDataUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
